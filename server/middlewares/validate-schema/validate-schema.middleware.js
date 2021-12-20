@@ -2,7 +2,6 @@ const { HttpCode } = require('../../common/enums/enums');
 
 const validateSchema = (schema) => async (req, res, next) => {
   const { body } = req;
-
   try {
     await schema.validateAsync(body, {
       abortEarly: false,
